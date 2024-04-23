@@ -1,0 +1,159 @@
+:root {
+    --clr-primary-100: hsl(158, 36%, 37%);
+    --clr-primary-200: hsl(30, 38%, 92%);
+    --clr-primary-300: hsl(159, 56%, 16%);
+   
+  
+    --clr-secondary-200: hsl(212, 21%, 14%);
+    --clr-secondary-300: hsl(228, 12%, 48%);
+    --clr-secondary-400: hsl(0, 0%, 100%);
+  
+    --ff-base: "Montserrat", sans-serif;
+    --ff-accent: "Fraunces", serif;
+  
+    --fw-regular: 500;
+    --fw-semi-bold: 700;
+  
+    --fs-base: 14px;
+  }
+  
+  /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  body{
+    background-color: var(--clr-primary-200);
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+  .container{
+    background-color: white;
+    width: 600px;
+    height: fit-content;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 30px;
+  }
+  .card h1{
+    font-family: var(--ff-accent);
+    /* font-weight: var(--fw-semi-bold); */
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .card p{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+  }
+  .info{
+    line-height: 2;
+  }
+  .info p {
+    margin-bottom: 10px;
+  }
+  p{
+    color: var(--clr-secondary-300);
+    font-size: 0.9em;
+    font-weight: var(--fw-regular);
+  }
+  .price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .price p{
+    text-decoration: line-through;
+  }
+  h3{
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    color: var(--clr-primary-100);
+  }
+  .btn{
+    background-color: var(--clr-primary-100);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  button{
+    background-color: transparent;
+    color: var(--clr-secondary-400);
+    font-weight: var(--fw-semi-bold);
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: var(--clr-primary-300);
+  }
+  
+  @media (max-width:750px){
+    body{
+      margin: 10px 20px;
+    }
+    .container{
+      display: grid;
+      height: 570px;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+  
+   
+  
+    
+
+  
